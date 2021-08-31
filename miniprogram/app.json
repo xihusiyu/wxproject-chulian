@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/near/near",
+        "pages/message/message"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#937bf5",
+        "navigationBarTitleText": "寻找初恋的她",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#b45b6",
+        "selectedColor": "#937bf5",
+        "list": [
+            {
+                "iconPath": "images/tabbar/首页.jpg",
+                "selectedIconPath": "images/tabbar/首页_首页_active.jpg",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            }, 
+            {
+                "iconPath": "images/tabbar/附近.jpg",
+                "selectedIconPath": "images/tabbar/附近_附近_active.jpg",
+                "pagePath": "pages/near/near",
+                "text": "附近"
+            },
+            {
+                "iconPath": "images/tabbar/消息.jpg",
+                "selectedIconPath": "images/tabbar/消息_消息_active.jpg",
+                "pagePath": "pages/near/near",
+                "text": "消息"
+            },
+            {
+                "iconPath": "images/tabbar/我的.jpg",
+                "selectedIconPath": "images/tabbar/我的_我的_active.jpg",
+                "pagePath": "pages/user/user",
+                "text": "我的"
+            }
+            
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

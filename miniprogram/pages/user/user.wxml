@@ -1,0 +1,15 @@
+<!-- pages/user/user.wxml -->
+<view class="container">
+  <view class="user-info">
+    <image src = "{{userPhoto}}" />
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 微信登录</button>
+      <!-- <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button> -->
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.userPhoto }}" mode="cover"></image>
+      <text  class="userinfo-nickname">欢迎您：{{userInfo.nickName}}</text>
+    
+    </block>
+  </view>
+</view>
