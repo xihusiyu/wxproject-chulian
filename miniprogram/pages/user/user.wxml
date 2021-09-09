@@ -3,13 +3,41 @@
   <view class="user-info">
     <image src = "{{userPhoto}}" />
     <block wx:if="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 微信登录</button>
+      <button wx:if="{{canIUseGetUserProfile}}"  disabled = "{{disabled}}" bindtap="getUserProfile"> 微信登录</button>
       <!-- <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button> -->
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.userPhoto }}" mode="cover"></image>
-      <text  class="userinfo-nickname">欢迎您：{{userInfo.nickName}}</text>
-    
+      <text class="userinfo-nickname"> 欢迎您：{{ nickName}}</text>
     </block>
   </view>
+    <!-- 我的页面和个人信息页面布局---------------------------------------------- -->
+
+  <view wx:if="{{hasUserInfo}}" class="user-list"> 
+         <navigator url="../editUserInfo/editUserInfo" open-type="navigate">
+            <view class="user-list-item">
+              <text>编辑个人信息</text>
+              <text class="iconfont icon-jiantou">
+              </text>
+            </view>
+         </navigator>
+
+         <navigator url="../friendList/friendList" open-type="navigate">
+            <view class="user-list-item">
+              <text>查看好友列表</text>
+              <text class="iconfont icon-jiantou">
+              </text>
+            </view>
+         </navigator>
+
+         <navigator url="{{ '../detail/detail?userId=' + id }}" open-type="navigate">
+            <view class="user-list-item">
+              <text>个人主页</text>
+              <text class="iconfont icon-jiantou">
+              </text>
+            </view>
+         </navigator>
+
+         
+    </view>
 </view>

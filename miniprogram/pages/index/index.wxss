@@ -1,6 +1,6 @@
 /* pages/index/index.wxss */
 
-.index-swiper{margin: 20rpx; height: 300rpx; border-radius: 10px; overflow: hidden;}
+.index-swiper{margin: 20rpx; height: 300rpx; border-radius: 10px; overflow: hidden;  margin-top: 100rpx;}
 .index-swiper image {width: 100%; border-radius: 10px; overflow: hidden;}
 
 

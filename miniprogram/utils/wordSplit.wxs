@@ -1,0 +1,10 @@
+
+var wordSplit = function(word){
+    if(word.length > 4 ){
+        word = word.substring(0,4) + '...' ;
+        // 从字符串中提取字符, 使用substring(第一个参数是包含的，第二个参数是你包含的)
+    }
+    return word;
+};
+
+module.exports.wordSplit = wordSplit

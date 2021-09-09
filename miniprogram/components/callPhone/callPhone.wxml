@@ -1,0 +1,3 @@
+<!--components/callPhone/callPhone.wxml-->
+<text bindtap= "handleCallPhone" class="iconfont  icon-bodadianhua"></text>
+<!-- 要把iconfont样式引入到组件中，需要有响应的方法 -->

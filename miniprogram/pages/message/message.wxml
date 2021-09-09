@@ -1,2 +1,19 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<!-- <text>pages/message/message.wxml</text> -->
+<view class= "message"  wx:if="{{ logged }}">
+    <view wx:if="{{ !userMessage.length}}">
+    <text class="message-text">暂无消息: </text>
+    </view>
+
+    <view wx:else >
+        <text class="message-text" >消息列表: </text>
+         <remove-list wx:for="{{ userMessage }}" wx:key= "index"  messageId= "{{ item }}" bindmyevent= "onMyEvent" />
+
+         <!-- 实时监听的列表就联动起来了，这里做了实现删除消息与子父组件间通信 -->
+
+         <!-- 父子组件通信是通过自定义组件，子父通信是通过自定义函数来通信
+         事件：用于子组件向父组件传递数据，可以传递任意数据。
+         WXML 数据绑定：用于父组件向子组件的指定属性设置数据，仅能设置 JSON 兼容数据（自基础库版本 2.0.9 开始，还可以在数据中包含函数）。具体在 组件模板和样式 章节中介绍。
+          -->
+    </view>
+</view>

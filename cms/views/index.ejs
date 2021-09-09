@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>初恋交友-CMS管理系统</h1>
+    
+    <!-- 这里加一个上传框 -->
+    <label for="">
+      上传图片： <input type="file"  id="uploadBtn">
+    </label>
+    <script>
+      var uploadBtn = document.getElementById('uploadBtn');
+      uploadBtn.onchange = function(ev){
+        var file = ev.target.files[0];
+        var param = new FormData();
+        param.append('file',  file);
+
+        // 以下是实现Ajax数据交互的过程
+        var config = {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        };
+
+        axios.post('/uploadBannerImg', param, config).then((res)=>{
+            console.log(res.data);
+        })
+      }
+    </script>
+
+  </body>
+</html>

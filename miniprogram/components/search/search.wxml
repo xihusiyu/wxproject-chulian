@@ -1,0 +1,36 @@
+<!--components/search/search.wxml-->
+<view class="{{ isFocus ? 'containerFocus' : 'container'}}">
+    <view  class="search">
+        <view class="search-text">
+            <text class="iconfont icon-sousuo"></text>
+            <input type="text"  placeholder="搜索有缘人" bindfocus="handleFocus" 
+            bindconfirm="handleConfirm" confirm-type="search" />
+            <!-- 在小程序输入框没有办法监听键盘的键值 -->
+        </view>
+        <view wx:if="{{ isFocus }}"  class="search-cancel" bindtap="handleCancel" >取消</view>
+    </view>
+
+    <view  class="search-history">
+        <text>历史记录</text>
+        <text bindtap="handleHistoryDelete" class="iconfont icon-shanchu"></text>
+    </view>
+
+    <view class="search-history-btn">
+       <text bindtap="handleHistoryItemDel"  data-text="{{ item }}" 
+     
+       wx:for="{{ historyList }}"  wx:key="index" >{{ item }}</text>
+    </view>
+
+    <navigator  wx:for="{{ searchList }}"  wx:key="index"  url="{{ '/pages/detail/detail?userId=' + item._id }}" open-type="navigate">
+            <view class="searchList-item">
+                <view>
+                    <image src="{{ item.userPhoto}}" />
+                    <text>{{ item.nickName }}</text>
+                </view>
+                     <text class="iconfont icon-jiantou">
+                    </text>
+            </view>
+    </navigator>
+
+
+</view>

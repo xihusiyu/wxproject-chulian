@@ -101,6 +101,36 @@
                     "pathName": "pages/message/message",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/detail/detail",
+                    "pathName": "pages/detail/detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/editUserInfo/editUserInfo",
+                    "pathName": "pages/editUserInfo/editUserInfo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/editUserInfo/signature",
+                    "pathName": "pages/editUserInfo/signature",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/detail/detail",
+                    "pathName": "pages/detail/detail",
+                    "query": "userId=14139e12612f255c08817856710eb6b3",
+                    "scene": null
+                },
+                {
+                    "name": "pages/message/message",
+                    "pathName": "pages/message/message",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

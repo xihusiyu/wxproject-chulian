@@ -10,7 +10,7 @@
         "minified": true,
         "newFeature": true,
         "coverView": true,
-        "nodeModules": false,
+        "nodeModules": true,
         "autoAudits": false,
         "showShadowRootInWxmlPanel": true,
         "scopeDataCheck": false,
@@ -19,6 +19,7 @@
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
         "useApiHostProcess": true,
@@ -29,17 +30,19 @@
         },
         "enableEngineNative": false,
         "useIsolateContext": true,
-        "useCompilerModule": true,
-        "userConfirmedUseCompilerModuleSwitch": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
-        "minifyWXSS": true
+        "minifyWXSS": true,
+        "showES6CompileOption": false
     },
     "appid": "wx8e671550b7b0ee82",
     "projectname": "%E5%AF%BB%E6%89%BE%E5%88%9D%E6%81%8B%E7%9A%84%E5%A5%B9",
-    "libVersion": "2.19.2",
+    "libVersion": "2.19.3",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "compileType": "miniprogram",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
     "condition": {
         "search": {
             "list": []
@@ -59,6 +62,12 @@
                     "id": -1,
                     "name": "db guide",
                     "pathName": "pages/databaseGuide/databaseGuide"
+                },
+                {
+                    "id": -1,
+                    "name": "pages/user/user",
+                    "pathName": "pages/user/user",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,8 @@
+var unitFormat = function(number){
+    if(number >= 1000){
+        number = (number/1000).toFixed(1) + 'K';
+        // 该toFixed()方法使用定点表示法格式化数字。括号里面的数字就是小数点后出现的位数
+    }
+    return number;
+}
+module.exports.unitFormat = unitFormat;
